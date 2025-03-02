@@ -1,0 +1,149 @@
+@font-face {
+    font-family: "Comic Sans MS";
+    src: url('../source/fonts/ComicSansMS.ttf') format('truetype');
+  }
+
+body {
+    font-family: "Comic Sans MS", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #797979;
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+main {
+    background-color: rgb(169, 218, 209);
+}
+
+.home {
+    background-image: url(https://cs.detector.media/doc/images/news/archive/2021/185334/i75_ArticleImage_185334.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+main section {
+    padding: 5em;
+}
+
+.home section {
+    padding: 5em;
+    padding-left: 55%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block; 
+    margin: 0 10px;
+}
+
+nav ul li :hover {
+    color: #a6a6a6;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #797979;
+    color: white;
+
+    /* border-top-style: solid;
+    border-width: 0.5px;
+    border-color: rgb(150, 180, 185); */
+}
+
+.initiative {
+    background-color: white;
+    width: 280px;
+    height: 350px;
+    padding: 20px;
+    padding-top: 0;
+    border-radius: 10px;
+}
+
+.initiatives {
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    gap: 20px 40px;
+    justify-content: center;
+}
+
+
+/* Media query for devices with screen widths up to 768px (tablets) */ 
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    .home {
+        background-position: right;
+    }
+    
+    main section {
+        padding: 5em;
+    }
+
+    .home section {
+        padding: 5em;
+    }
+
+    nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .text {
+        grid-column: 1 / 12;
+    }
+    
+    .photo {
+        grid-column: 4 / 9;
+    }
+}
+
+/* Media query for devices with screen widths up to 480px (phones) */ 
+@media (max-width: 480px) {
+    header {
+        font-size: 14px;
+    }
+    
+    nav ul {
+        display: block;
+    }
+
+    nav ul li {
+        margin: 3px 0;
+    }
+
+    main section {
+        padding: 1em;
+    }
+
+    .home section {
+        padding: 1em;
+    }
+
+}
