@@ -3,11 +3,19 @@
     src: url('../source/fonts/ComicSansMS.ttf') format('truetype');
   }
 
+html {  
+    height: 100%;
+}
+
 body {
     font-family: "Comic Sans MS", sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -19,6 +27,7 @@ header {
 
 main {
     background-color: rgb(169, 218, 209);
+    flex-grow: 1;
 }
 
 .home {
@@ -61,10 +70,6 @@ footer {
     padding: 10px;
     background-color: #797979;
     color: white;
-
-    /* border-top-style: solid;
-    border-width: 0.5px;
-    border-color: rgb(150, 180, 185); */
 }
 
 .initiative {
