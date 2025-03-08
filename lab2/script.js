@@ -61,6 +61,12 @@ fetch(csvUrl)
         ul.appendChild(volunteersLi);
         
         div.appendChild(ul);
+
+        const button = document.createElement('button');
+        button.classList.add('btn_join');
+        button.textContent = 'Приєднатися';
+
+        div.appendChild(button);
         
         // Додаємо ініціативу в контейнер
         initiativesContainer.appendChild(div);
@@ -192,3 +198,23 @@ btn_submit.addEventListener('click', function(event) {
     const blackout = document.querySelector('.blackout');
     blackout.style.display = 'none';
 });
+
+//---------------------------------------------------- Обробка наведення та додавання опису --------------------------------------
+container.addEventListener("click", function(event) {
+    if (event.target.classList.value == "btn_join") {
+        if (event.target.textContent == 'Приєднатися') {
+            event.target.textContent = 'Ви приєдналися'
+
+            const parentDiv = event.target.closest('.initiative');
+            const volunteersLi = parentDiv.querySelector('li:nth-child(3)');
+            
+            let remainingVolunteers = parseInt(volunteersLi.textContent.match(/\d+/)[0], 10);
+
+            if (remainingVolunteers > 0) {
+                remainingVolunteers--;
+                volunteersLi.textContent = `Кількість волонтерів: ${remainingVolunteers}`;
+            }
+        }
+    }
+}, true);
+

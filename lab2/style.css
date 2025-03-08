@@ -80,6 +80,17 @@ footer {
     padding-top: 0;
     border-radius: 10px;
     transform: translateX(-10px);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.initiative ul {
+    flex-grow: 1;
+}
+
+.description {
+    flex-grow: 1;
 }
 
 .initiatives {
@@ -140,7 +151,13 @@ input, textarea, .btn_submit {
     resize: vertical;
 }
 
-.btn_submit {
+.btn_submit{
+    border: solid;
+    border-color: rgb(169, 218, 209);
+}
+
+.btn_join {
+    width: 90%;
     border: solid;
     border-color: rgb(169, 218, 209);
 }
