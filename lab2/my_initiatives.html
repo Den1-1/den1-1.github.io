@@ -26,15 +26,18 @@
     <main>
       <section>
         <h2 class="initiatives">Мої ініціативи</h2>
+
+        <div class="control_initiatives">  
+          <button class="btn_hide">Сховати опис</button>
+          <button class="btn_filter">Фільтри</button>
+        </div>
+
         <div class="container">
-          <div class="initiative">
-              <h3>Чисте місто</h3>
-              <p>Допоможемо зробити наше місто чистішим! Приєднуйтесь до екологічної ініціативи зі збирання сміття в парках та на вулицях.</p>
-              <ul>
-                  <li>Дата: 15 березня 2025</li>
-                  <li>Місце проведення: Парк Шевченка, Львів</li>
-                  <li>Кількість волонтерів: 30</li>
-              </ul>
+          <div class="initiative create">
+            <h3>Створи свою ініціативу!</h3>
+            <p class="description">Створи власну ініціативу, залучи однодумців і змінюй світ разом!</p>
+            <ul></ul>
+            <button class="btn_add active">Створити!</button>
           </div>
         </div>
       </section>
@@ -50,5 +53,66 @@
         </ul>
       </nav>
     </footer>
+
+    <div class="blackout"></div>
+
+    <form class="initiativeForm">
+      <h3>Додати ініціативу</h3>
+      <button class="btn_close">✖</button>
+
+      <label for="title">Назва ініціативи:</label>
+      <input type="text" id="title" name="title">
+
+      <label for="category">Категорія:</label>
+      <input type="text" id="category" name="category">
+
+      <label for="description">Опис:</label>
+      <textarea id="description" name="description" rows="4"></textarea>
+
+      <label for="date">Дата проведення:</label>
+      <input type="date" id="date" name="date">
+
+      <label for="location">Місце проведення:</label>
+      <input type="text" id="location" name="location">
+
+      <label for="volunteers">Кількість волонтерів:</label>
+      <input type="number" id="volunteers" name="volunteers" min="1">
+
+      <button class="btn_submit" type="submit">Створити ініціативу</button>
+    </form>
+
+    <form class="filterForm">
+      <h3>Фільтри</h3>
+      <button class="btn_closef">✖</button>
+
+      <div>
+        <input type="checkbox" id="relevant" name="relevant">
+        <label for="relevant">- лише актуальні</label>
+      </div>
+
+      <p>Категорії:</p>
+
+      <div class="category_filter">
+        <div>
+          <input type="checkbox" id="education" name="education">
+          <label for="education">- Education</label>
+        </div>
+        
+        <div>
+          <input type="checkbox" id="health" name="health">
+          <label for="health">- Health</label>
+        </div>
+        
+        <div>
+          <input type="checkbox" id="environment" name="environment">
+          <label for="environment">- Environment</label>
+        </div>
+      </div>
+
+      <button class="btn_submitf" type="submit">Застосувати</button>
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

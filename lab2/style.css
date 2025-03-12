@@ -72,6 +72,7 @@ footer {
     color: white;
 }
 
+/* ----------------------- Карточка ініціатив ------------ */
 .initiative {
     background-color: white;
     width: 280px;
@@ -97,6 +98,7 @@ footer {
     text-align: center;
 }
 
+/* --------------------- Контейнер ініціатив ------------ */
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, 300px);
@@ -104,6 +106,7 @@ footer {
     justify-content: center;
 }
 
+/* ---------- Кнопки керування сховати опис, фільтри ---- */
 .control_initiatives {
     display: flex;
     justify-content: center;
@@ -127,7 +130,20 @@ button:active {
     background-color: rgb(200, 200, 200);
 }
 
-.initiativeForm {
+.active {
+    background-color: rgb(169, 218, 209);
+}
+
+.active:hover {
+    background-color: rgb(159, 208, 199);
+}
+
+.active:active {
+    background-color: rgb(149, 198, 189);
+}
+
+/* ------------------------ Форма додати ініціативу ------*/
+.initiativeForm, .filterForm {
     display: none;
     position: fixed;
     top: 50%;
@@ -144,25 +160,19 @@ button:active {
     border-color: rgb(169, 218, 209);
 }
 
-input, textarea, .btn_submit {
+.initiativeForm input, .initiativeForm textarea, .btn_submit {
     width: 90%;
     margin-bottom: 10px;
     padding: 8px;
     resize: vertical;
 }
 
-.btn_submit{
+.btn_submit, .btn_submitf{
     border: solid;
     border-color: rgb(169, 218, 209);
 }
 
-.btn_join {
-    width: 90%;
-    border: solid;
-    border-color: rgb(169, 218, 209);
-}
-
-.btn_close {
+.btn_close, .btn_closef {
     height: 40px;
     width: 40px;
     padding: 5px;
@@ -173,6 +183,41 @@ input, textarea, .btn_submit {
     right: 0;
 }
 
+/* ---------------------------- Форма фільтрів ------------ */
+.filterForm {
+    /* display: flex; */
+    width: 200px;
+}
+
+.filterForm div {
+    display: flex;
+}
+
+.category_filter {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ----------------------------------------------- */
+.btn_join {
+    width: 90%;
+    border: solid;
+    border-color: rgb(169, 218, 209);
+}
+
+.btn_add {
+    width: 90%;
+    border: solid;
+    border-color: rgb(169, 218, 209);
+    /* font-size: 1.2em; */
+}
+
+.create {
+    /* font-size: 1.2em; */
+}
+
+
+/* -------------- Затемнення --------------- */
 .blackout {
     display: none;
     position: fixed;
@@ -180,6 +225,8 @@ input, textarea, .btn_submit {
     height: 100%;
     background-color: rgba(20, 20, 20, 0.5);
 }
+
+
 
 /* Media query for devices with screen widths up to 768px (tablets) */ 
 @media (max-width: 768px) {
