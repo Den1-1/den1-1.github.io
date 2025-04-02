@@ -97,7 +97,6 @@ btn_submit.addEventListener('click', function(event) {
     const location = document.getElementById('location').value;
     const volunteers = document.getElementById('volunteers').value;
 
-    const fields = ['title', 'category', 'description', 'date', 'location', 'volunteers'];
     let isValid = true;
 
     fields.forEach(id => {
