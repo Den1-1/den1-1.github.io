@@ -87,4 +87,4 @@ export default function Card({ data, index, hideDescription}) {
         </div>
     );
 
-}
+} 
