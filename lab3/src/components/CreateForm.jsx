@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Card from "./Card";
 
 export default function CreateForm({setIsFormVisible, setCards}) {
     const [formData, setFormData] = useState({
@@ -23,7 +22,6 @@ export default function CreateForm({setIsFormVisible, setCards}) {
         e.preventDefault();
 
         // Отримання значень з форми
-        const { title, category, description, date, location, volunteers } = formData;
         const fields = ['title', 'category', 'description', 'date', 'location', 'volunteers'];
         let isValid = true;
 
@@ -43,19 +41,17 @@ export default function CreateForm({setIsFormVisible, setCards}) {
         setCards(prevCards => [formData, ...prevCards]);
         setIsFormVisible(prev => !prev)
         
-        // // Збереження ініціативи
-        // let created_initiatives = JSON.parse(localStorage.getItem("created_initiatives")) || []; 
+        // Збереження ініціативи
+        let created_initiatives = JSON.parse(localStorage.getItem("created_initiatives")) || []; 
 
-        // console.log(created_initiatives);
-        // if (created_initiatives == null) 
-        //     created_initiatives = [];
+        console.log(created_initiatives);
+        if (created_initiatives == null) 
+            created_initiatives = [];
 
-        // created_initiatives.push([title, category, description, date, location, volunteers]);
-        // localStorage.setItem("created_initiatives", JSON.stringify(created_initiatives)); 
-
+        created_initiatives.push(formData);
+        localStorage.setItem("created_initiatives", JSON.stringify(created_initiatives)); 
 
         console.log('Form submitted:', formData);
-        // Add your form submission logic here
     };
 
     return (
