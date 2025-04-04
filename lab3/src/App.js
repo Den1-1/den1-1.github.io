@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import AvalibleInitiatives from "./pages/AvalibleInitiatives";
 import MyInitiatives from "./pages/MyInitiatives";
