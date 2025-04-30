@@ -1,13 +1,14 @@
 {
-  "name": "lab3",
+  "name": "lab4",
   "version": "0.1.0",
-  "homepage": "https://den1-1.github.io/lab3",
+  "homepage": "https://den1-1.github.io/lab4/build",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^13.5.0",
+    "firebase": "^11.6.0",
     "papaparse": "^5.5.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
