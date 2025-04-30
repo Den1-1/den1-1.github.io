@@ -15,7 +15,7 @@ export default function loadInitiatives(cards, setCards, filterValues) {
     const currentDate = new Date();
     
     // URL до твого CSV-файлу на сервері чи в Інтернеті
-    const csvUrl = process.env.PUBLIC_URL + '/datasets/nyc-service-volunteer-opportunities.csv';
+    const csvUrl = '/lab3/datasets/nyc-service-volunteer-opportunities.csv';
     let dataArray = []; // Масив для зберігання даних ініціатив
 
     //---------------------------------- Відображення збережених ініціатив -----------------------------------
