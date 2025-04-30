@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/lab4/build/static/css/main.40c6deeb.css",
+    "main.js": "/lab4/build/static/js/main.db2dc94d.js",
+    "static/media/ComicSansMS.ttf": "/lab4/build/static/media/ComicSansMS.2be4a49a17700938dbc0.ttf",
+    "index.html": "/lab4/build/index.html",
+    "main.40c6deeb.css.map": "/lab4/build/static/css/main.40c6deeb.css.map",
+    "main.db2dc94d.js.map": "/lab4/build/static/js/main.db2dc94d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.40c6deeb.css",
+    "static/js/main.db2dc94d.js"
+  ]
+}
