@@ -6,7 +6,19 @@ const express = require("express");
 const cors = require("cors");
 
 const admin = require("firebase-admin"); // Initialize Firebase Admin SDK
-const serviceAccount = require("./serviceAccountKey.json");
+
+let serviceAccountPath = '';
+
+if (fs.existsSync('./serviceAccountKey.json')) {
+  serviceAccountPath = './serviceAccountKey.json';
+} else if (fs.existsSync('/etc/secrets/serviceAccountKey.json')) {
+  serviceAccountPath = '/etc/secrets/serviceAccountKey.json';
+} else {
+  throw new Error('❌ serviceAccountKey.json not found in expected locations.');
+}
+
+const serviceAccount = require(serviceAccountPath);
+// const serviceAccount = require("./serviceAccountKey.json");
 admin.initializeApp({ credential: admin.credential.cert(serviceAccount) }); 
 const db = admin.firestore();
 
