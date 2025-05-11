@@ -9,6 +9,7 @@ const admin = require("firebase-admin"); // Initialize Firebase Admin SDK
 
 let serviceAccountPath = '';
 
+const fs = require('fs');
 if (fs.existsSync('./serviceAccountKey.json')) {
   serviceAccountPath = './serviceAccountKey.json';
 } else if (fs.existsSync('/etc/secrets/serviceAccountKey.json')) {
