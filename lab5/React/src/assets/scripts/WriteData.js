@@ -82,21 +82,21 @@ export async function removeSelectedInitiative(userId, initiativeId) {
   }
 }
 
-export async function ReadAllInitiatives() {
-    try {
-        const response = await fetch("http://localhost:5000/api/initiatives");
-        if (!response.ok) {
-            throw new Error("Failed to fetch initiatives");
-        }
+// export async function ReadAllInitiatives() {
+//     try {
+//         const response = await fetch("http://localhost:5000/api/initiatives");
+//         if (!response.ok) {
+//             throw new Error("Failed to fetch initiatives");
+//         }
 
-        const initiatives = await response.json();
-        console.log("All initiatives:", initiatives);
-        return initiatives;
-    } catch (error) {
-        console.error("Error fetching initiatives:", error);
-        return null;
-    }
-}
+//         const initiatives = await response.json();
+//         console.log("All initiatives:", initiatives);
+//         return initiatives;
+//     } catch (error) {
+//         console.error("Error fetching initiatives:", error);
+//         return null;
+//     }
+// }
 
 export async function ReadInitiativesPaginated(limit = 10, startAfterId = null) {
     try {
