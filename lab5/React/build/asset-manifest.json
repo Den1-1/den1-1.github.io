@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/lab5/React/build/static/css/main.74fc4f4f.css",
-    "main.js": "/lab5/React/build/static/js/main.7e223b4a.js",
+    "main.js": "/lab5/React/build/static/js/main.72901927.js",
     "static/media/ComicSansMS.ttf": "/lab5/React/build/static/media/ComicSansMS.2be4a49a17700938dbc0.ttf",
     "index.html": "/lab5/React/build/index.html",
     "main.74fc4f4f.css.map": "/lab5/React/build/static/css/main.74fc4f4f.css.map",
-    "main.7e223b4a.js.map": "/lab5/React/build/static/js/main.7e223b4a.js.map"
+    "main.72901927.js.map": "/lab5/React/build/static/js/main.72901927.js.map"
   },
   "entrypoints": [
     "static/css/main.74fc4f4f.css",
-    "static/js/main.7e223b4a.js"
+    "static/js/main.72901927.js"
   ]
 }

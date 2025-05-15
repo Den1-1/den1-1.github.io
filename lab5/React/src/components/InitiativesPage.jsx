@@ -41,12 +41,17 @@ export default function InitiativesPage({type}) {
         return () => unsubscribe(); // Clean-up при демонтажі
     }, []);
 
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
     // Відслідковуємо прокручування
     const handleScroll = () => {
         if (document.documentElement.scrollHeight < document.documentElement.scrollTop + window.innerHeight + 300 && !loading) {
             setLoading(true); // Увімкнути стан завантаження
             loadInitiatives(cards, setCards, filterValues, userData);
-            setLoading(false); // Вимкнути стан завантаження
+            sleep(2000).then(() => {
+                setLoading(false); // Вимкнути стан завантаження
+            });
         }
     };
 

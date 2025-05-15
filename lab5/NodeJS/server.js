@@ -25,7 +25,7 @@ admin.initializeApp({ credential: admin.credential.cert(serviceAccount) });
 const db = admin.firestore();
 
 const app = express(); 
-// app.use(cors());
+app.use(cors());
 app.use(express.json());
 
 app.listen(5000, () => { console.log("Server is running on port 5000"); });
